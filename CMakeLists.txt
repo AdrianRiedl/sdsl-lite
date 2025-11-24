@@ -4,6 +4,7 @@ include(AppendCompilerFlags)
 
 ## Project information ##
 project(sdsl CXX C)
+set(CMAKE_CXX_STANDARD 17)
 set(PROJECT_VENDOR "Simon Gog")
 set(PROJECT_CONTACT "simon.gog@gmail.com")
 set(PROJECT_URL "https://github.com/simongog/sdsl-lite")
@@ -147,5 +148,3 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/sdsl-lite.pc.cmake"
                "${CMAKE_CURRENT_BINARY_DIR}/sdsl-lite.pc" @ONLY)
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/sdsl-lite.pc"
         DESTINATION "lib/pkgconfig")
-
-add_subdirectory(test)
